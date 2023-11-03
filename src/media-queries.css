@@ -1,0 +1,25 @@
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1023px) {
+    .desktop-header {
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .mobile-toolbar-menu {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1279px) {
+
+}
