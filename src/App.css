@@ -1,0 +1,69 @@
+.header-offers {
+    background-color: #9f2c90;
+    width: 100%;
+    padding: 10px;
+    color: #fff !important;
+}
+
+.mobile-toolbar-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .12);
+}
+
+.mobile-toolbar-menu-item a {
+    font-size: 11px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    color: #333333;
+}
+
+.mobile-toolbar-menu-icons {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.desktop-header {
+    display: none;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .12);
+}
+
+.header-logo-mobile {
+    width: 65px;
+}
+
+.header-logo-mobile img {
+    width: 100%;
+}
+
+.main-mobile-header {
+    background-color: #FEFEFF;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .12);
+}
+
+.header-logo-desktop {
+    width: 100px;
+}
+
+.header-search-desktop {
+    background-color: #F3F4F6;
+    border-radius: 5px;
+}
+
+.header-search-desktop-input {
+    background-color: #F3F4F6;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.header-search-desktop-btn i {
+    color: rgb(117, 117, 117);
+}
+
+.desktop-burger-menu {
+    border-left: 1px solid rgba(129,129,129,.2);
+}
