@@ -16,6 +16,7 @@
 
 .mobile-toolbar-menu-item a {
     font-size: 11px;
+    white-space: nowrap;
     font-weight: 600;
     text-overflow: ellipsis;
     color: #333333;
@@ -58,6 +59,7 @@
     border: none;
     border-radius: 5px;
     width: 100%;
+    padding-left: 1rem;
 }
 
 .header-search-desktop-btn i {
@@ -65,5 +67,101 @@
 }
 
 .desktop-burger-menu {
-    border-left: 1px solid rgba(129,129,129,.2);
+    border-left: 1px solid rgba(129, 129, 129, .2);
+}
+
+.search-screen-container {
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+    transition: all 0.45s ease-out;
+}
+
+.mobile-search-container {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #9f2c90;
+}
+
+.mobile-search-container input::placeholder {
+    font-size: 10px;
+    color: #a1a3a8;
+}
+
+.mobile-search input {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 2.17;
+}
+
+.popular-searches, .search-options-container {
+    font-size: 11px;
+    color: #3f4064;
+}
+
+.popular-searches i, .search-options-container i {
+    color: #a1a3a8;
+}
+
+.recently-searched-item {
+    color: #3f4064;
+    border: 1px solid #e0e0e2;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 2.15;
+}
+
+.recently-searched-item i {
+    color: #3f4064;
+}
+
+.poplar-searches-items a, .recently-searched-items a {
+    white-space: nowrap;
+}
+
+.mobile-menu {
+    background-color: #FEFEFF;
+    z-index: 9999;
+    transition: all 0.3s ease-out;
+}
+
+.close-menu i {
+    color: #3f4064;
+}
+
+.menu-tab, .categories-tab {
+    background-color: rgba(0, 0, 0, .05);
+    color: rgba(33, 37, 41, 0.55);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.is-active-tab {
+    color: #212529 !important;
+    border-bottom: 2px solid #9f2c90 !important;
+    background-color: rgba(0, 0, 0, .08);
+    transition: color, background-color .4s ease-out;
+}
+
+.mobile-menu-nav-item, .mobile-menu-categories-item {
+    padding: 15px;
+    border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mobile-menu-nav-item a {
+    width: 100% !important;
+    display: inline-block;
+}
+
+.mobile-nav-dropdown-menu {
+    transition: all .2s ease-out;
+}
+
+.mobile-nav-dropdown-menu div {
+    background-color: rgba(0, 0, 0, .03);
 }
