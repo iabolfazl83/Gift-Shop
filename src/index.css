@@ -45,3 +45,9 @@ i {
     font-size: 9px;
     line-height: 15px;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
