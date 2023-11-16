@@ -17,7 +17,7 @@ function MobileSearchScreen({screenSearch, setScreenSearch}) {
                            placeholder="جستجو..."/>
                 </div>
                 <div className="clear-search col-1">
-                    <span onClick={() => searchInput.current.value = ''}>
+                    <span role="button" onClick={() => searchInput.current.value = ''}>
                     <i className="fa-solid fa-circle-xmark"></i>
                     </span>
                 </div>
