@@ -11,6 +11,7 @@
     left: 0;
     right: 0;
     background-color: #fff;
+    z-index: 9999;
 }
 
 .mobile-toolbar-menu-item {
@@ -281,7 +282,7 @@
     justify-content: center;
 }
 
-.swiper-pagination-bullet {
+.slider-content .swiper-pagination .swiper-pagination-bullet {
     width: 7px !important;
     height: 7px !important;
     background-color: #555 !important;
@@ -290,6 +291,205 @@
     cursor: pointer !important;
 }
 
-.swiper-pagination-bullet-active {
+.slider-content .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #fff !important;
+}
+
+
+.all-products-link, .all-products-link i {
+    font-size: 14px !important;
+    color: #9f2c90 !important;
+    font-weight: 600;
+}
+
+.all-products-link i {
+    font-size: 12px !important;
+    margin: 0 .3rem;
+}
+
+.section-header {
+    color: #242424 !important;
+    border-bottom: 2px solid #9f2c90;
+    padding: 7px 0 !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    z-index: 9;
+}
+
+.swiper-slide {
+    width: 50%;
+}
+
+.new-product-slide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: rgb(254, 254, 255);
+    padding: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 5%);
+}
+
+.slide-image img {
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.slide-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slide-caption h3 {
+    overflow: hidden;
+    font-size: 14px;
+    color: #333333;
+    text-overflow: ellipsis;
+    text-wrap: revert;
+    opacity: .9;
+    margin-bottom: 1.5rem;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: .3rem;
+    color: #3f4064;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.product-price span {
+    font-size: 14px !important;
+}
+
+.products-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent !important;
+    border: 2px solid #757575;
+    border-radius: 50% !important;
+    margin: 0 5px !important;
+    cursor: pointer !important;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.products-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    border-color: #000;
+}
+
+.products-slider .swiper-button-prev, .products-slider .swiper-button-next, .gift-shop-mag-articles .swiper-button-next,
+.gift-shop-mag-articles .swiper-button-prev {
+    background-color: #FEFEFF;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgb(191, 192, 196);
+    padding: .8rem !important;
+}
+
+.products-slider .swiper-button-prev::after, .products-slider .swiper-button-next::after,
+.gift-shop-mag-articles .swiper-button-next::after, .gift-shop-mag-articles .swiper-button-prev::after {
+    color: #333333;
+    font-size: 14px !important;
+    font-weight: 700;
+}
+
+.gift-types-header::before {
+    content: '';
+    background-color: #7777;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: calc(100% - 6px);
+}
+
+.slide-image svg {
+    width: 70px;
+    height: 70px;
+}
+
+.gift-types-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 3.5rem;
+}
+
+.gift-types-slide div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    overflow: hidden;
+}
+
+.slide-caption h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.gift-types-slide div button {
+    background-color: #9f2c90;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.gift-types-slide div button a {
+    color: #FFF !important;
+    font-size: 12px;
+}
+
+.gift-shop-mag-header p, .caption-text p {
+    font-size: 14px;
+    color: #777777;
+}
+
+.caption-text p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.caption-header h3 {
+    font-size: 15px;
+}
+
+.mag-article {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow: hidden;
+}
+
+.article-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.article-image a img {
+    transition: all .25s ease-out;
+}
+
+.article-image:hover a img {
+    transform: scale(1.2);
+}
+
+.more-info a {
+    color: #9f2c90 !important;
+    font-size: 13px;
 }
