@@ -1,48 +1,28 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect, useRef, useContext} from "react";
 import MobileSearchScreen from "./M-searchScreen";
 import {LoadingScreen} from "../index"
 import {toFarsiNumber} from "../../services/numberToPersian";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import '../../../node_modules/swiper/swiper.css';
 import '../../../node_modules/swiper/swiper-bundle.min.css';
 import {Autoplay, Pagination} from 'swiper/modules';
 import axios from "axios";
+import {AppContext} from "../../Context/AppContext";
 
-function Header({loading, categories, sliders}) {
+function Header() {
+    const {loading, categories, sliders, stopBodyScrolling} = useContext(AppContext)
     const [screenSearch, setScreenSearch] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [currentCategory, setCurrentCategory] = useState({})
     const [activeMenuTab, setActiveMenuTab] = useState({
         menuTab: true, categoryTab: false,
     });
-    const [isOverflowHidden, setIsOverflowHidden] = useState(false);
     const categoriesContainer = useRef(null)
     const categoriesDropDownMenu = useRef(null)
     const categoriesBarsIcon = useRef(null)
     const mobileNavDropDownMenu = useRef(null)
     const shopDropDownMenu = useRef(null)
-
-    const stopBodyScrolling = () => {
-        setIsOverflowHidden((prev) => !prev);
-    };
-
-    useEffect(() => {
-        const body = document.body;
-        if (isOverflowHidden) {
-            body.classList.add('p-right');
-            body.classList.add('overflow-y-hidden');
-        } else {
-            body.classList.remove('overflow-y-hidden');
-            body.classList.remove('p-right');
-        }
-
-        return () => {
-            body.classList.remove('overflow-y-hidden');
-            body.classList.remove('p-right');
-        };
-    }, [isOverflowHidden]);
 
     function toggleClass(elRef, toggleClass) {
         elRef.current.classList.toggle(`${toggleClass}`)
@@ -89,7 +69,7 @@ function Header({loading, categories, sliders}) {
     }, [categories])
 
 
-    return (<header>
+    return (<header className="header mb-5">
         <MobileSearchScreen screenSearch={screenSearch} setScreenSearch={setScreenSearch}/>
         <a href="" className="header-offers text-center d-block">با هر خرید یک جایزه ببرید!</a>
 
@@ -324,22 +304,23 @@ function Header({loading, categories, sliders}) {
             </div>
 
         </div>
-
-        <section className="d-flex flex-column flex-lg-row header-main-content container mt-3">
-            <div className="first-row d-flex flex-column col-lg-9 my-3 gap-3 justify-content-lg-between">
-                <div className="slider-content">
-                    <Swiper
-                        dir="rtl" spaceBetween={10} centeredSlides={true} autoplay={{
+        <section className="header-main-content d-flex flex-column flex-lg-row container mt-3">
+            <div
+                className="first-row d-flex flex-column col-lg-9 my-1 my-md-2 my-lg-3 gap-3 justify-content-lg-between">
+                <div className="slider-content h-100">
+                    <Swiper style={{height: "100%"}}
+                            dir="rtl" spaceBetween={10} centeredSlides={true} autoplay={{
                         delay: 2500, disableOnInteraction: false,
                     }}
-                        pagination={{clickable: true,}} modules={[Autoplay, Pagination]} className="mySwiper">
+                            pagination={{clickable: true,}} modules={[Autoplay, Pagination]} className="mySwiper">
                         {
                             sliders.length ?
                                 sliders.map(item => (
                                     <SwiperSlide>
-                                        <div id={item.id} className="rounded">
-                                            <a href="" className="rounded">
-                                                <img className="w-100 rounded" src={item.imageUrl} alt={item.name}/>
+                                        <div id={item.id} className="rounded h-100">
+                                            <a href="" className="rounded h-100">
+                                                <img className="w-100 rounded h-100" src={item.imageUrl}
+                                                     alt={item.name}/>
                                             </a>
                                         </div>
                                     </SwiperSlide>
@@ -348,17 +329,17 @@ function Header({loading, categories, sliders}) {
                         }
                     </Swiper>
                 </div>
-                <div className="first-row-child d-flex flex-row gap-2">
-                    <div className="rounded d-flex justify-content-center">
-                        <div className="rounded">
+                <div className="first-row-child d-flex flex-row gap-3">
+                    <div className="rounded d-flex col-8 flex-shrink-1 flex-lg-grow-1">
+                        <div className="d-flex rounded align-items-stretch">
                             <a href="">
-                                <img className="rounded w-100 box-shadow"
+                                <img className="rounded w-100 box-shadow h-100"
                                      src={require("../../assets/images/product-3.jpg")}
                                      alt=""/>
                             </a>
                         </div>
                     </div>
-                    <div className="rounded d-flex justify-content-center">
+                    <div className="rounded d-flex col-4 flex-shrink-1 flex-lg-grow-1">
                         <div className="rounded">
                             <a href="">
                                 <img className="rounded w-100 box-shadow"
@@ -369,8 +350,9 @@ function Header({loading, categories, sliders}) {
                     </div>
                 </div>
             </div>
-            <div className="second-row d-flex flex-row flex-lg-column col-lg-3 gap-2 gap-lg-3 my-lg-3 mx-lg-3">
-                <div className="rounded d-flex justify-content-center">
+            <div
+                className="second-row d-flex flex-row flex-lg-column justify-content-between col-lg-3 my-lg-3 mx-lg-3 gap-2">
+                <div className="rounded d-flex col-4 col-lg-auto flex-shrink-1 flex-lg-shrink-0">
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow" src={require("../../assets/images/product-4.jpg")}
@@ -378,7 +360,7 @@ function Header({loading, categories, sliders}) {
                         </a>
                     </div>
                 </div>
-                <div className="rounded d-flex justify-content-center">
+                <div className="rounded d-flex col-4 col-lg-auto flex-shrink-1 flex-lg-shrink-0">
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow" src={require("../../assets/images/product-6.jpg")}
@@ -386,7 +368,7 @@ function Header({loading, categories, sliders}) {
                         </a>
                     </div>
                 </div>
-                <div className="rounded d-flex justify-content-center">
+                <div className="rounded d-flex col-4 col-lg-auto flex-shrink-1 flex-lg-shrink-0">
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow" src={require("../../assets/images/product-7.jpg")}
