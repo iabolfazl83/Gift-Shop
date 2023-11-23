@@ -1,27 +1,35 @@
 import React, {useEffect, useState} from 'react';
 import {Main, Header, Footer, MobileToolbar} from "./components";
-import {getAllCategories, getAllSliders} from "./services/apiServices/getRows";
+import {getAllCategories, getAllSliders, getTopProducts} from "./services/apiServices/getRows";
+import {AppContext} from "./Context/AppContext";
 
 function App() {
     const [loading, setLoading] = useState(false)
     const [categories, setCategories] = useState({})
     const [sliders, setSliders] = useState({})
+    const [topProducts, setTopProducts] = useState({})
+    const [isOverflowHidden, setIsOverflowHidden] = useState(false);
 
     useEffect(() => {
         const fetchCatsData = async () => {
             try {
                 setLoading((prevLoading => !prevLoading))
-                const {data, status} = await getAllCategories();
-                const {rows} = data.data;
-                const {data: data2, status: status2} = await getAllSliders()
-                const {rows: rows2} = data2.data;
-
-                if (status === 200 && status2 === 200) {
+                stopBodyScrolling()
+                const {data: categoriesData, status: categoriesStatus} = await getAllCategories();
+                const {rows: categoriesRows} = categoriesData.data;
+                const {data: slidersData, status: slidersStatus} = await getAllSliders()
+                const {rows: slidersRows} = slidersData.data;
+                // const {data, status} = await getTopProducts()
+                console.log(`in try loading:${loading} overflow:${isOverflowHidden}`)
+                if (categoriesStatus && slidersStatus === 200) {
+                    console.log(`in if loading:${loading} overflow:${isOverflowHidden}`)
+                    stopBodyScrolling()
                     setLoading((prevLoading => !prevLoading))
-                    setCategories(rows.filter(item => item.tags).map(item => item.tags)[0])
-                    setSliders(rows2.filter(item => item.sliders).map(item => item.sliders)[0])
+                    setCategories(categoriesRows.filter(item => item.tags).map(item => item.tags)[0])
+                    setSliders(slidersRows.filter(item => item.sliders).map(item => item.sliders)[0])
                 }
             } catch (err) {
+                console.log(`in error loading:${loading} overflow:${isOverflowHidden}`)
                 setLoading((prevLoading => !prevLoading))
                 console.log(err.message)
             }
@@ -30,15 +38,51 @@ function App() {
         fetchCatsData();
     }, [])
 
+    const stopBodyScrolling = () => {
+        setIsOverflowHidden((prev) => !prev);
+
+    }
+
+    useEffect(() => {
+        const body = document.body;
+        if (isOverflowHidden) {
+            body.classList.add('p-right');
+            body.classList.add('overflow-y-hidden');
+        } else {
+            body.classList.remove('overflow-y-hidden');
+            body.classList.remove('p-right');
+        }
+
+        return () => {
+            body.classList.remove('overflow-y-hidden');
+            body.classList.remove('p-right');
+        };
+    })
+
+
     return (
-        <div className="App">
-            <div className="body-container">
-                <MobileToolbar/>
-                <Header loading={loading} categories={categories} sliders={sliders}/>
-                <Main/>
-                <Footer/>
+        <AppContext.Provider
+            value={{
+                loading,
+                setLoading,
+                isOverflowHidden,
+                setIsOverflowHidden,
+                categories,
+                setCategories,
+                sliders,
+                setSliders,
+                topProducts,
+                stopBodyScrolling,
+            }}>
+            <div className="App">
+                <div className="body-container">
+                    <MobileToolbar/>
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </div>
             </div>
-        </div>
+        </AppContext.Provider>
     );
 }
 
