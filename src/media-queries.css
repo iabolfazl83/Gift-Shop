@@ -1,9 +1,41 @@
 @media screen and (min-width: 480px) {
-
+    .swiper-slide, .gift-types-slider .swiper-slide {
+        width: 30%;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .swiper-slide, .gift-types-slider .swiper-slide {
+        width: 25%;
+    }
 
+    .posters {
+        flex-direction: row !important;
+    }
+
+    .section-header {
+        font-size: 18px !important;
+    }
+
+    .slide-caption h3 {
+        font-size: 16px !important;
+    }
+
+    .product-price span {
+        font-size: 16px !important;
+    }
+
+    .product-price {
+        font-size: 14px !important;
+    }
+    .slide-image svg {
+        width: 90px;
+        height: 90px;
+    }
+
+    .slide-caption h6 {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 1023px) {
@@ -18,8 +50,40 @@
     .mobile-toolbar-menu {
         display: none !important;
     }
+
+    .swiper-slide {
+        width: 20%;
+    }
+
+    .section-header {
+        font-size: 20px !important;
+    }
+
+    .all-products-link {
+        font-size: 16px !important;
+    }
+
+    .slide-caption h6 {
+        font-size: 18px;
+    }
+
+    .gift-types-slide div button {
+        padding: 10px 16px;
+    }
 }
 
 @media screen and (min-width: 1279px) {
+    .header-main-content {
+        max-width: 1110px !important;
+    }
+
+    .swiper-slide {
+        width: 17%;
+    }
+
+    .section-header {
+        font-size: 22px !important;
+    }
+
 
 }
