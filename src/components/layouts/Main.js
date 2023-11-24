@@ -882,7 +882,7 @@ function Main() {
                         },
                     }}
                             className="mySwiper">
-                        <SwiperSlide>
+                        <SwiperSlide className="bg-white p-2 rounded-3">
                             <div className="mag-article">
                                 <div className="article-image rounded-2">
                                     <a href="">
@@ -914,7 +914,7 @@ function Main() {
                             </div>
                         </SwiperSlide>
 
-                        <SwiperSlide>
+                        <SwiperSlide className="bg-white p-2 rounded-3">
 
                             <div className="mag-article d-flex flex-column align-items-stretch">
                                 <div className="article-image rounded-2">
@@ -941,7 +941,7 @@ function Main() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className="bg-white p-2 rounded-3">
                             <div className="mag-article">
                                 <div className="article-image rounded-2">
                                     <a href="">
@@ -973,7 +973,7 @@ function Main() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className="bg-white p-2 rounded-3">
                             <div className="mag-article">
                                 <div className="article-image rounded-2">
                                     <a href="">
