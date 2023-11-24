@@ -69,7 +69,7 @@ function Header() {
     }, [categories])
 
 
-    return (<header className="header mb-5">
+    return (<header className="header mb-5" id="#">
         <MobileSearchScreen screenSearch={screenSearch} setScreenSearch={setScreenSearch}/>
         <a href="" className="header-offers text-center d-block">با هر خرید یک جایزه ببرید!</a>
 
