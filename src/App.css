@@ -493,3 +493,82 @@
     color: #9f2c90 !important;
     font-size: 13px;
 }
+
+.footer {
+    background-color: #FEFEFF;
+}
+
+.go-up-btn-container button {
+    font-size: 14px;
+    color: #3f3f46;
+}
+
+.footer-support-info p, .subscription-header p {
+    font-size: 14px;
+    color: #71717A;
+}
+
+.subscription-container {
+    background-color: rgb(243 244 246);
+    box-shadow: 0 1px 10px #0000000d;
+    backdrop-filter: blur(64px);
+}
+
+.subscription-input button {
+    background-color: #a62698;
+    font-size: 14px;
+}
+
+.subscription-input button:hover {
+    opacity: .8 !important;
+    background-color: #a62698 !important;
+}
+
+.subscription-input input {
+    color: rgb(82 82 91);
+}
+
+.social-links div a {
+    color: #3f3f46;
+    font-size: 22px;
+}
+
+.fa-telegram, .fa-linkedin, .fa-x-twitter, .fa-instagram {
+    transition: color .25s ease-out;
+}
+
+.fa-telegram:hover {
+    color: #74c0fc;
+    opacity: 1 !important;
+}
+
+.fa-x-twitter:hover {
+    color: #212529;
+    opacity: 1 !important;
+}
+
+.fa-linkedin:hover {
+    color: #1c7ed6;
+    opacity: 1 !important;
+}
+
+.fa-instagram:hover {
+    color: #dd0075;
+    opacity: 1 !important;
+}
+
+.footer-nav-container h5, .footer-shop-verification h5 {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    margin: 1.5rem 0 ;
+}
+
+.footer-nav-container p, .copywrite-rights p, .verification-header p {
+    font-size: 14px;
+    color: #777777;
+}
+
+.verification-header h5 {
+    margin: 1rem 0 ;
+}
