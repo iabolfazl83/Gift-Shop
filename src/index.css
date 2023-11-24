@@ -11,6 +11,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'IRANYekan', sans-serif !important;
     background-color: #eff3f4 !important;
+    padding-bottom: 55px;
 }
 
 .mobile-header, .desktop-header {
