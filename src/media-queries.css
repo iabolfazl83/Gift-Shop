@@ -36,9 +36,17 @@
     .slide-caption h6 {
         font-size: 16px;
     }
+
+    .footer-support-info p:first-of-type {
+        border-left: 1px solid #dee2e6;
+    }
 }
 
 @media screen and (min-width: 1023px) {
+    body {
+        padding-bottom: 0;
+    }
+
     .desktop-header {
         display: block;
     }
@@ -84,6 +92,4 @@
     .section-header {
         font-size: 22px !important;
     }
-
-
 }
