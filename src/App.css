@@ -5,13 +5,17 @@
     color: #fff !important;
 }
 
+.mobile-header, .desktop-header {
+    background-color: #FEFEFF;
+}
+
 .mobile-toolbar-menu {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 9999;
+    z-index: 9;
 }
 
 .mobile-toolbar-menu-item {
@@ -53,6 +57,10 @@
     width: 100%;
 }
 
+.mobile-header {
+    z-index: 9;
+}
+
 .main-mobile-header {
     background-color: #FEFEFF;
 }
@@ -79,7 +87,7 @@
 }
 
 .categories-container {
-    z-index: 99999;
+    z-index: 9;
 }
 
 .desktop-burger-menu::before {
@@ -96,7 +104,7 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 999;
+    z-index: 99;
     transition: all 0.45s ease-out;
 }
 
@@ -145,7 +153,7 @@
 
 .mobile-menu {
     background-color: #FEFEFF;
-    z-index: 9999;
+    z-index: 99;
     transition: all 0.3s ease-out;
     max-width: 320px;
 }
@@ -312,27 +320,30 @@
     border-bottom: 2px solid #9f2c90;
     padding: 7px 0 !important;
     font-size: 1rem !important;
-    margin: 0 !important;
-    z-index: 9;
+    margin: 0 !important;: 9;
 }
 
 .swiper-slide {
     width: 50%;
 }
 
-.new-product-slide {
+.gift-shop-mag-articles .swiper-slide {
+    width: 80%;
+}
+
+.product-slide {
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: rgb(254, 254, 255);
-    padding: 8px;
     margin-bottom: 3rem;
     box-shadow: 0 1px 10px rgb(0 0 0 / 5%);
 }
 
 .slide-image img {
     width: 100%;
-    border-radius: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     margin-bottom: 1rem;
 }
 
@@ -342,12 +353,14 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow: hidden;
+    padding: 5px 10px 15px 10px;
+
 }
 
 .slide-caption h3 {
     overflow: hidden;
     font-size: 14px;
-    color: #333333;
+    color: rgba(51, 51, 51, 0.87);
     text-overflow: ellipsis;
     text-wrap: revert;
     opacity: .9;
@@ -417,9 +430,16 @@
     height: 70px;
 }
 
+.gift-types-slider {
+    background-image: url(https://shop.3sz.ir/wp-content/uploads/2020/07/background-gift.svg);
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
 .gift-types-slide {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: .5rem;
@@ -432,26 +452,35 @@
     align-items: center;
     flex-direction: column;
     gap: .5rem;
-    overflow: hidden;
+    padding: 5px;
 }
 
 .slide-caption h6 {
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 14px;
 }
 
-.gift-types-slide div button {
+.gift-types-btn {
+    color: #FFF !important;
+    font-size: 12px;
     background-color: #9f2c90;
     border: none;
     padding: 7px 10px;
     border-radius: 20px;
     display: flex;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .15);
+    transition: opacity .25s;
 }
 
-.gift-types-slide div button a {
-    color: #FFF !important;
-    font-size: 12px;
+.gift-types-btn:hover {
+    opacity: .8;
+}
+
+.gift-types-btn:active {
+    box-shadow: 0 0 0;
+    transform: translateY(1px);
 }
 
 .gift-shop-mag-header p, .caption-text p {
@@ -473,25 +502,48 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    height: 100%;
     overflow: hidden;
 }
 
 .article-image {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
-.article-image a img {
-    transition: all .25s ease-out;
+.article-image a:hover {
+    opacity: unset;
+}
+
+.article-image a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: opacity .3s ease;
 }
 
 .article-image:hover a img {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+.article-image:hover a::after {
+    opacity: .8 !important;
+}
+
+.article-image a img {
+    transition: all .5s ease-out;
 }
 
 .more-info a {
     color: #9f2c90 !important;
     font-size: 13px;
+    font-weight: 600;
 }
 
 .footer {
@@ -534,21 +586,21 @@
 }
 
 .fa-telegram, .fa-linkedin, .fa-x-twitter, .fa-instagram {
-    transition: color .25s ease-out;
+    transition: all .25s ease-out;
 }
 
 .fa-telegram:hover {
-    color: #74c0fc;
+    color: #1c7ed6;
     opacity: 1 !important;
 }
 
 .fa-x-twitter:hover {
-    color: #212529;
+    color: #282828;
     opacity: 1 !important;
 }
 
 .fa-linkedin:hover {
-    color: #1c7ed6;
+    color: #1062a8;
     opacity: 1 !important;
 }
 
@@ -561,14 +613,64 @@
     font-size: 16px;
     color: #333333;
     font-weight: 600;
-    margin: 1.5rem 0 ;
+    margin: 1.5rem 0;
 }
 
-.footer-nav-container p, .copywrite-rights p, .verification-header p {
+.footer-nav-container p a, .copywrite-rights p, .verification-header p {
     font-size: 14px;
-    color: #777777;
+    color: #777777 !important;
 }
 
 .verification-header h5 {
-    margin: 1rem 0 ;
+    margin: 1rem 0;
+}
+
+.text-404 {
+    color: rgba(0, 0, 0, .56);
+}
+
+.paths {
+    font-size: 11px;
+}
+
+.form-container form div p, .questions-container div p {
+    font-size: 12px !important;
+    color: #a5a5a5;
+}
+
+label {
+    font-size: 14px;
+}
+
+.input-font {
+    font-size: 14px;
+    color: rgba(77, 77, 77, 0.88);
+}
+
+.question {
+    font-size: 14px;
+}
+
+.x-icon {
+    transition: all .25s;
+    transform: rotate(45deg);
+}
+
+#userMessage {
+    min-height: 150px;
+}
+
+.navbar-wrapper {
+    background-color: #FEFEFE;
+}
+
+.general-header::before {
+    content: "";
+    position: absolute;
+    background-color: #dee2e6;
+    height: 1px;
+    width: 200vw;
+    bottom: 0;
+    top: 100%;
+    right: -100vw;
 }
