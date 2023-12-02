@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import {AppContext} from "../../../Context/AppContext";
 import {Link, useLocation} from "react-router-dom";
-import {getAllCategories, getAllSliders} from "../../../services/apiServices/getRows";
+import {getAllCategories} from "../../../services/apiServices/getRows";
 
 
 function Navbar() {
