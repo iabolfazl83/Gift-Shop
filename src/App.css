@@ -566,9 +566,10 @@
     backdrop-filter: blur(64px);
 }
 
-.subscription-input button {
-    background-color: #a62698;
+.subscription-input a {
+    background-color: #a62698 !important;
     font-size: 14px;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscription-input button:hover {
