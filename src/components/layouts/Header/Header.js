@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {LoadingScreen, Navbar} from "../../index"
+import {LoadingScreen} from "../../index"
 import {Swiper, SwiperSlide} from 'swiper/react';
 import '../../../../node_modules/swiper/swiper.min.css';
 import '../../../../node_modules/swiper/swiper-bundle.min.css';
