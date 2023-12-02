@@ -45,46 +45,47 @@ function Footer() {
             <div className="footer-nav-container container d-flex flex-column flex-md-row">
                 <div className="footer-nav-list-1 container">
                     <h5>با گیفت شاپ</h5>
-                    <p>فروش در گیفت شاپ</p>
-                    <p>گزارش تخلف در گیفت شاپ</p>
-                    <p>تماس با گیفت شاپ</p>
-                    <p>درباره گیفت شاپ</p>
+                    <p><a href="">فروش در گیفت شاپ</a></p>
+                    <p><a href="">گزارش تخلف در گیفت شاپ</a></p>
+                    <p><a href="">تماس با گیفت شاپ</a></p>
+                    <p><a href="">درباره گیفت شاپ</a></p>
                 </div>
 
                 <div className="footer-nav-list-2 container">
                     <h5>خدمات مشتریان</h5>
-                    <p>پاسخ به پرسش‌های متداول</p>
-                    <p>رویه‌های بازگرداندن کالا</p>
-                    <p>شرایط استفاده</p>
-                    <p>حریم خصوصی</p>
-                    <p>گزارش باگ</p>
+                    <p><a href="">پاسخ به پرسش‌های متداول</a></p>
+                    <p><a href="">رویه‌های بازگرداندن کالا</a></p>
+                    <p><a href="">شرایط استفاده</a></p>
+                    <p><a href="">حریم خصوصی</a></p>
+                    <p><a href="">گزارش باگ</a></p>
                 </div>
 
                 <div className="footer-nav-list-3 container">
                     <h5>راهنمای خرید از گیفت شاپ</h5>
-                    <p>نحوه ثبت سفارش</p>
-                    <p>رویه ارسال سفارش</p>
-                    <p>شیوه‌های پرداخت</p>
+                    <p><a href="">نحوه ثبت سفارش</a></p>
+                    <p><a href="">رویه ارسال سفارش</a></p>
+                    <p><a href="">شیوه‌های پرداخت</a></p>
                 </div>
             </div>
-            <div className="footer-shop-verification border-top text-center container">
+            <div className="footer-shop-verification border-top text-center container d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">
                 <div className="verification-header">
                     <h5>اعتماد شما افتخار ماست</h5>
                     <p>نماد های زیر تست بوده و فاقد اعتبار میباشند</p>
                 </div>
                 <div className="verification-logos d-flex justify-content-center">
                     <div className="verification-log">
-                        <img className="w-75" src={require("../../assets/images/enamad.png")} alt="enamad"/>
+                        <img className="w-75 auto py-lg-3" src={require("../../assets/images/enamad.png")} alt="enamad"/>
                     </div>
                     <div className="verification-log">
-                        <img className="w-75" src={require("../../assets/images/samandehi.png")} alt="samandehi"/>
+                        <img className="w-75 auto py-lg-3" src={require("../../assets/images/samandehi.png")} alt="samandehi"/>
                     </div>
                 </div>
             </div>
 
             <div className="copywrite-rights text-center border-top my-3 p-3 container">
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                    <p>کلیه حقوق این وبسایت متعلق به گروه تجاری گیفت شاپ می باشد.</p>
+                <div
+                    className="d-flex flex-column justify-content-center align-items-center flex-lg-row justify-content-lg-between">
+                    <p className="mb-lg-0">کلیه حقوق این وبسایت متعلق به گروه تجاری گیفت شاپ می باشد.</p>
                     <div className="bank-logos col-md-4">
                         <img className="w-100" src={require("../../assets/images/897987.png")} alt="bank logos"/>
                     </div>
