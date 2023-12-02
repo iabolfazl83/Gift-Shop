@@ -30,7 +30,7 @@ function Footer() {
                         <div
                             className="subscription-input col-md-6 bg-white p-1 my-2 rounded-3 d-flex justify-content-around">
                             <input className="border-0 ps-3 pe-2 w-100" type="email" placeholder="ایمیل شما"/>
-                            <button className="btn d-inline-block px-3 text-white">ثبت</button>
+                            <a href="" className="btn d-inline-block px-3 text-white">ثبت</a>
                         </div>
                         <div className="social-links d-flex justify-content-around mt-3 mt-md-0 gap-md-3 gap-5">
                             <div><a href=""><i className="fa-brands fa-instagram"></i></a></div>
