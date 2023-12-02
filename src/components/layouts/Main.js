@@ -28,7 +28,7 @@ function Main() {
                                     className="mySwiper">
                                 <SwiperSlide>
                                     <div
-                                        className="new-product-slide">
+                                        className="product-slide">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -48,7 +48,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -68,7 +68,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -89,7 +89,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -109,7 +109,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -149,7 +149,7 @@ function Main() {
                                     pagination={{clickable: true,}} navigation={true} modules={[Pagination, Navigation]}
                                     className="mySwiper">
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -169,7 +169,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -190,7 +190,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -210,7 +210,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -250,7 +250,7 @@ function Main() {
                                     pagination={{clickable: true,}} navigation={true} modules={[Pagination, Navigation]}
                                     className="mySwiper">
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -270,7 +270,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -291,7 +291,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -311,7 +311,7 @@ function Main() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="new-product-slide d-flex flex-column">
+                                    <div className="product-slide d-flex flex-column">
                                         <div className="slide-image">
                                             <a href="">
                                                 <img
@@ -490,7 +490,7 @@ function Main() {
                                     <div className="slide-caption">
                                         <div>
                                             <h6>هدیه برای خانم ها</h6>
-                                            <button><a href="">مشاهده</a></button>
+                                            <a href="" className="gift-types-btn">مشاهده</a>
                                         </div>
                                     </div>
                                 </div>
@@ -582,7 +582,7 @@ function Main() {
                                     <div className="slide-caption">
                                         <div>
                                             <h6>هدیه برای آقایان</h6>
-                                            <button><a href="">مشاهده</a></button>
+                                            <a href="" className="gift-types-btn">مشاهده</a>
                                         </div>
                                     </div>
                                 </div>
@@ -709,7 +709,7 @@ function Main() {
                                     <div className="slide-caption">
                                         <div>
                                             <h6>کارت هدیه دیجی شاپ</h6>
-                                            <button><a href="">مشاهده</a></button>
+                                            <a href="" className="gift-types-btn">مشاهده</a>
                                         </div>
                                     </div>
                                 </div>
@@ -768,7 +768,7 @@ function Main() {
                                     <div className="slide-caption">
                                         <div>
                                             <h6>جعبه های جادویی</h6>
-                                            <button><a href="">مشاهده</a></button>
+                                            <a href="" className="gift-types-btn">مشاهده</a>
                                         </div>
                                     </div>
                                 </div>
@@ -856,7 +856,7 @@ function Main() {
                                     <div className="slide-caption">
                                         <div>
                                             <h6>کادو های تخفیف دار</h6>
-                                            <button><a href="">مشاهده</a></button>
+                                            <a href="" className="gift-types-btn">مشاهده</a>
                                         </div>
                                     </div>
                                 </div>
@@ -882,16 +882,17 @@ function Main() {
                         },
                     }}
                             className="mySwiper">
-                        <SwiperSlide className="bg-white p-2 rounded-3">
-                            <div className="mag-article">
-                                <div className="article-image rounded-2">
+                        <SwiperSlide className="bg-white">
+                            <article className="mag-article">
+                                <div className="article-image col">
                                     <a href="">
-                                        <img className="w-100 rounded-2"
+                                        <img className="w-100 h-100"
                                              src={require("../../assets/images/article-1.jpg")}
                                              alt="article image"/>
                                     </a>
                                 </div>
-                                <div className="article-caption">
+                                <div
+                                    className="article-caption col px-2 pb-3 d-flex flex-column justify-content-around">
                                     <div className="caption-header text-center">
                                         <a href="">
                                             <h3>هشت ایده جالب کادو پیچی </h3>
@@ -911,50 +912,22 @@ function Main() {
                                         <a href="">ادامه مطلب...</a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </SwiperSlide>
-
-                        <SwiperSlide className="bg-white p-2 rounded-3">
-
-                            <div className="mag-article d-flex flex-column align-items-stretch">
-                                <div className="article-image rounded-2">
+                        <SwiperSlide className="bg-white">
+                            <article className="mag-article">
+                                <div className="article-image col">
                                     <a href="">
-                                        <img className="w-100 rounded-2"
+                                        <img className="w-100 h-100"
                                              src={require("../../assets/images/article-2.jpg")}
                                              alt="article image"/>
                                     </a>
                                 </div>
-                                <div className="article-caption">
+                                <div
+                                    className="article-caption col px-2 pb-3 d-flex flex-column justify-content-around">
                                     <div className="caption-header text-center">
                                         <a href="">
-                                            <h3>20 نکته مهم برای اینکه جشن تولد خیلی خوش بگذره </h3>
-                                        </a>
-                                    </div>
-                                    <div className="caption-text">
-                                        <p>اگر به جشن تولد می روید خوش اخلاق باشید و در مراسم با یکدیگر شوخی کنید، آواز
-                                            بخوانید
-                                            و کمک کنید که مراسم به بهترین نحو ممکن برگزار شود.</p>
-                                    </div>
-                                    <div className="more-info text-center">
-                                        <a href="">ادامه مطلب...</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className="bg-white p-2 rounded-3">
-                            <div className="mag-article">
-                                <div className="article-image rounded-2">
-                                    <a href="">
-                                        <img className="w-100 rounded-2"
-                                             src={require("../../assets/images/article-3.jpg")}
-                                             alt="article image"/>
-                                    </a>
-                                </div>
-                                <div className="article-caption">
-                                    <div className="caption-header text-center">
-                                        <a href="">
-                                            <h3>اثر رنگ ها | روانشناسی رنگ ها </h3>
-                                        </a>
+                                            <h3>اثر رنگ ها | روانشناسی رنگ ها </h3></a>
                                     </div>
                                     <div className="caption-text">
                                         <p>حس بینایی، همواره برای کسب اطلاعات درباره جهان پیرامون قوی‌ترین حس انسان به
@@ -971,18 +944,46 @@ function Main() {
                                         <a href="">ادامه مطلب...</a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </SwiperSlide>
-                        <SwiperSlide className="bg-white p-2 rounded-3">
-                            <div className="mag-article">
-                                <div className="article-image rounded-2">
+                        <SwiperSlide className="bg-white">
+                            <article className="mag-article">
+                                <div className="article-image col">
                                     <a href="">
-                                        <img className="w-100 rounded-2"
+                                        <img className="w-100 h-100"
+                                             src={require("../../assets/images/article-3.jpg")}
+                                             alt="article image"/>
+                                    </a>
+                                </div>
+                                <div
+                                    className="article-caption col px-2 pb-3 d-flex flex-column justify-content-around">
+                                    <div className="caption-header text-center">
+                                        <a href="">
+                                            <h3>20 نکته مهم برای اینکه جشن تولد خیلی خوش بگذره </h3>
+                                        </a>
+                                    </div>
+                                    <div className="caption-text">
+                                        <p>اگر به جشن تولد می روید خوش اخلاق باشید و در مراسم با یکدیگر شوخی کنید، آواز
+                                            بخوانید
+                                            و کمک کنید که مراسم به بهترین نحو ممکن برگزار شود.</p>
+                                    </div>
+                                    <div className="more-info text-center">
+                                        <a href="">ادامه مطلب...</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide className="bg-white">
+                            <article className="mag-article">
+                                <div className="article-image col">
+                                    <a href="">
+                                        <img className="w-100 h-100"
                                              src={require("../../assets/images/article-4.jpg")}
                                              alt="article image"/>
                                     </a>
                                 </div>
-                                <div className="article-caption">
+                                <div
+                                    className="article-caption col px-2 pb-3 d-flex flex-column justify-content-around">
                                     <div className="caption-header text-center">
                                         <a href="">
                                             <h3> آداب معاشرت در هدیه دادن!! </h3>
@@ -1001,7 +1002,7 @@ function Main() {
                                         <a href="">ادامه مطلب...</a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </SwiperSlide>
                     </Swiper>
                 </div>
