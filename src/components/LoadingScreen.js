@@ -13,11 +13,11 @@ const LoadingScreen = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center,",
-                zIndex: "999999",
+                zIndex: "9999",
             }}>
                 <img
-                    src={require("../assets/loading-gif.gif")}
-                    className="d-block m-auto p-4 loading-screen"
+                    src={require("../assets/images/loading-3.gif")}
+                    className="d-block m-auto p-4"
                     style={{width: "100px"}}
                     alt="loading"
                 />
