@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import {Navbar, Footer, MobileToolbar} from "./index";
 import {Link} from "react-router-dom";
 
 function ContactUs() {
-    const [key, setKey] = useState('home');
     return (
         <div>
             <Navbar/>
@@ -89,12 +88,12 @@ function ContactUs() {
                                 }}
                                      className="question border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse2"
+                                       data-bs-toggle="collapse" href="#collapse1"
                                        aria-expanded="false" aria-controls="collapseExample">
                                         <span>چگونه می‌توان با پشتیبانی فروشگاه تماس برقرار کرد؟</span>
                                         <i className="fa-solid fa-plus d-flex align-items-center"></i>
                                     </a>
-                                    <div className="collapse" id="collapse2">
+                                    <div className="collapse" id="collapse1">
                                         <div className="border-top p-2 pb-0 my-2">
                                             <p>برای تماس با پشتیبانی فروشگاه، می‌توانید از طریق صفحه تماس با ما یا شماره
                                                 تلفن درج شده در سایت، با تیم پشتیبانی تماس بگیرید.</p>
@@ -106,14 +105,14 @@ function ContactUs() {
                                 }}
                                      className="question border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse1"
+                                       data-bs-toggle="collapse" href="#collapse2"
                                        aria-expanded="false" aria-controls="collapseExample">
                                         <span>
                                         راه های ارتباطی ما
                                         </span>
                                         <i className="fa-solid fa-plus d-flex align-items-center"></i>
                                     </a>
-                                    <div class="collapse" id="collapse1">
+                                    <div class="collapse" id="collapse2">
                                         <div class="border-top p-2 pb-0 my-2">
                                             <p>شماره تلفن : <a href="tel:09120000000">09120000000</a></p>
                                             <p>ایمیل :<a href="mailto:something@example.com"> example@something.com</a>
