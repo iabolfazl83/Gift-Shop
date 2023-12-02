@@ -2,11 +2,19 @@
     .swiper-slide, .gift-types-slider .swiper-slide {
         width: 30%;
     }
+
+    .gift-shop-mag-articles .swiper-slide {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .swiper-slide, .gift-types-slider .swiper-slide {
         width: 25%;
+    }
+
+    .gift-shop-mag-articles .swiper-slide {
+        width: 40%;
     }
 
     .posters {
@@ -17,10 +25,6 @@
         font-size: 18px !important;
     }
 
-    .slide-caption h3 {
-        font-size: 16px !important;
-    }
-
     .product-price span {
         font-size: 16px !important;
     }
@@ -28,6 +32,7 @@
     .product-price {
         font-size: 14px !important;
     }
+
     .slide-image svg {
         width: 90px;
         height: 90px;
@@ -45,6 +50,10 @@
 @media screen and (min-width: 1023px) {
     body {
         padding-bottom: 0;
+    }
+
+    .gift-shop-mag-articles .swiper-slide {
+        width: 30%;
     }
 
     .desktop-header {
@@ -71,6 +80,10 @@
         font-size: 16px !important;
     }
 
+    .slide-caption h3 {
+        font-size: 16px !important;
+    }
+
     .slide-caption h6 {
         font-size: 18px;
     }
@@ -81,12 +94,12 @@
 }
 
 @media screen and (min-width: 1279px) {
-    .header-main-content {
-        max-width: 1110px !important;
-    }
-
     .swiper-slide {
         width: 17%;
+    }
+
+    .gift-shop-mag-articles .swiper-slide {
+        width: 25%;
     }
 
     .section-header {
