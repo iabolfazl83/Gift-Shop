@@ -41,7 +41,7 @@ function Header() {
                         <div className="rounded">
                             <a href="">
                                 <img className="rounded w-100 box-shadow h-100"
-                                     src={require("../../../assets/images/product-3.jpg")}
+                                     src={require("../../../assets/images/product-slide-3.jpg")}
                                      alt=""/>
                             </a>
                         </div>
@@ -50,7 +50,7 @@ function Header() {
                         <div className="rounded">
                             <a href="">
                                 <img className="rounded w-100 box-shadow"
-                                     src={require("../../../assets/images/product-1.jpg")}
+                                     src={require("../../../assets/images/product-slide-1.jpg")}
                                      alt=""/>
                             </a>
                         </div>
@@ -63,7 +63,7 @@ function Header() {
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow"
-                                 src={require("../../../assets/images/product-4.jpg")}
+                                 src={require("../../../assets/images/product-slide-4.jpg")}
                                  alt=""/>
                         </a>
                     </div>
@@ -72,7 +72,7 @@ function Header() {
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow"
-                                 src={require("../../../assets/images/product-6.jpg")}
+                                 src={require("../../../assets/images/product-slide-6.jpg")}
                                  alt=""/>
                         </a>
                     </div>
@@ -81,7 +81,7 @@ function Header() {
                     <div className="rounded">
                         <a href="">
                             <img className="rounded w-100 box-shadow"
-                                 src={require("../../../assets/images/product-7.jpg")}
+                                 src={require("../../../assets/images/product-slide-7.jpg")}
                                  alt=""/>
                         </a>
                     </div>
