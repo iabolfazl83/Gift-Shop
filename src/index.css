@@ -57,7 +57,7 @@ i {
 }
 
 .p-right {
-    padding-right: 17px;
+    padding-right: 18px;
 }
 
 .box-shadow {
@@ -66,4 +66,32 @@ i {
 
 .right-100 {
     right: -200%;
+}
+
+.top-65 {
+    top: 64px;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
 }
