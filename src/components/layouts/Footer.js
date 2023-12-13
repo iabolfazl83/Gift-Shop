@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer border-top">
             <div
                 className="footer-header w-100 d-flex flex-column-reverse flex-md-row gap-3 justify-content-between align-items-center pt-4 container">
                 <div
@@ -82,7 +82,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="copywrite-rights text-center border-top my-3 p-3 container">
+            <div className="copywrite-rights text-center border-top mt-3 p-3 container">
                 <div
                     className="d-flex flex-column justify-content-center align-items-center flex-lg-row justify-content-lg-between">
                     <p className="mb-lg-0">کلیه حقوق این وبسایت متعلق به گروه تجاری گیفت شاپ می باشد.</p>
