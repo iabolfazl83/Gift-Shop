@@ -1,4 +1,4 @@
-export function toFarsiNumber(n) {
+export function numberToPersian(n) {
     const farsiDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 
     return n
