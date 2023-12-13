@@ -9,15 +9,17 @@ import "bootstrap/dist/js/bootstrap.min.js"
 import "./media-queries.css"
 import {ContactUs} from "./components/index";
 import GiftShopMag from "./components/GiftShopMag";
+import Store from "./components/Store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App/>}></Route>
+                <Route path="/" element={<App/>}/>
                 <Route path="/contact-us" element={<ContactUs/>}/>
                 <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
+                <Route path="/store" element={<Store/>}/>
                 <Route path="*" element={
                     <main className="container m-auto">
                         <div className="container w-auto d-flex flex-column gap-5 align-items-center">
