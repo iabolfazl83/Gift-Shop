@@ -12,12 +12,12 @@ function ContactUs() {
                     <h1 className="text-center mb-4 fw-bolder">تماس با ما</h1>
                 </div>
                 <div>
-                    <div className="text-center paths">
+                    <div className="text-center fs-11">
                         {<Link to="/">خانه</Link>} /<span className="text-muted"> تماس با ما</span>
                     </div>
                 </div>
             </header>
-            <main className="bg-white py-4 border-bottom">
+            <main className="bg-white py-4">
                 <div className="form-container container d-flex flex-column flex-md-row">
                     <form className="ms-md-3 col-12 col-md-6">
                         <div>
@@ -27,14 +27,14 @@ function ContactUs() {
                         <div className="d-flex flex-column flex-md-row gap-2">
                             <div className="col-12 col-md-6">
                                 <div>
-                                    <label htmlFor="userName">نام شما</label>
+                                    <label className="fs-14" htmlFor="userName">نام شما</label>
                                 </div>
                                 <input className="w-100 px-2 py-1 my-2 border rounded-2 input-font" type="text"
                                        id="userName" required={true}/>
                             </div>
                             <div className="col-12 col-md-6">
                                 <div>
-                                    <label htmlFor="userEmail">ایمیل شما</label>
+                                    <label className="fs-14" htmlFor="userEmail">ایمیل شما</label>
                                 </div>
                                 <input className="w-100 px-2 py-1 my-2 border rounded-2 input-font" type="email"
                                        id="userEmail" required={true}/>
@@ -43,14 +43,14 @@ function ContactUs() {
                         <div className="d-flex flex-column flex-md-row gap-2">
                             <div className="col-12 col-md-6">
                                 <div>
-                                    <label htmlFor="userNumber">شماره تلفن</label>
+                                    <label className="fs-14" htmlFor="userNumber">شماره تلفن</label>
                                 </div>
                                 <input className="w-100 px-2 py-1 my-2 border rounded-2 input-font" type="number"
                                        id="userNumber" required={true}/>
                             </div>
                             <div className="col-12 col-md-6">
                                 <div>
-                                    <label htmlFor="userCompany">کمپانی</label>
+                                    <label className="fs-14" htmlFor="userCompany">کمپانی</label>
                                 </div>
                                 <input className="w-100 px-2 py-1 my-2 border rounded-2 input-font" type="text"
                                        id="userCompany" required={false}/>
@@ -59,21 +59,21 @@ function ContactUs() {
                         <div className="d-flex flex-column">
                             <div className="col-12">
                                 <div>
-                                    <label htmlFor="userWebsite">آدرس وب سایت</label>
+                                    <label className="fs-14" htmlFor="userWebsite">آدرس وب سایت</label>
                                 </div>
                                 <input className="w-100 px-2 py-1 my-2 border rounded-2 input-font" type="text"
                                        id="userWebsite"/>
                             </div>
                             <div className="col-12">
                                 <div>
-                                    <label htmlFor="userMessage">پیام شما</label>
+                                    <label className="fs-14" htmlFor="userMessage">پیام شما</label>
                                 </div>
                                 <textarea className="w-100 px-2 py-1 my-2 border rounded-2 input-font"
                                           id="userMessage"/>
                             </div>
                         </div>
                         <div className="my-2">
-                            <button class="btn bg-secondary-subtle">ارسال</button>
+                            <button className="btn bg-secondary-subtle">ارسال</button>
                         </div>
                     </form>
                     <div className="me-md-3 col-12 col-md-6">
@@ -86,7 +86,7 @@ function ContactUs() {
                                 <div onClick={e => {
                                     e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
                                 }}
-                                     className="question border-bottom p-2">
+                                     className="fs-14 border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
                                        data-bs-toggle="collapse" href="#collapse1"
                                        aria-expanded="false" aria-controls="collapseExample">
@@ -103,7 +103,7 @@ function ContactUs() {
                                 <div onClick={e => {
                                     e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
                                 }}
-                                     className="question border-bottom p-2">
+                                     className="fs-14 border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
                                        data-bs-toggle="collapse" href="#collapse2"
                                        aria-expanded="false" aria-controls="collapseExample">
@@ -112,8 +112,8 @@ function ContactUs() {
                                         </span>
                                         <i className="fa-solid fa-plus d-flex align-items-center"></i>
                                     </a>
-                                    <div class="collapse" id="collapse2">
-                                        <div class="border-top p-2 pb-0 my-2">
+                                    <div className="collapse" id="collapse2">
+                                        <div className="border-top p-2 pb-0 my-2">
                                             <p>شماره تلفن : <a href="tel:09120000000">09120000000</a></p>
                                             <p>ایمیل :<a href="mailto:something@example.com"> example@something.com</a>
                                             </p>
@@ -124,7 +124,7 @@ function ContactUs() {
                                 <div onClick={e => {
                                     e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
                                 }}
-                                     className="question border-bottom p-2">
+                                     className="fs-14 border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
                                        data-bs-toggle="collapse" href="#collapse3"
                                        aria-expanded="false" aria-controls="collapseExample">
@@ -142,7 +142,7 @@ function ContactUs() {
                                 <div onClick={e => {
                                     e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
                                 }}
-                                     className="question border-bottom p-2">
+                                     className="fs-14 border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
                                        data-bs-toggle="collapse" href="#collapse4"
                                        aria-expanded="false" aria-controls="collapseExample">
@@ -160,7 +160,7 @@ function ContactUs() {
                                 <div onClick={e => {
                                     e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
                                 }}
-                                     className="question border-bottom p-2">
+                                     className="fs-14 border-bottom p-2">
                                     <a className="d-inline-block d-flex justify-content-between"
                                        data-bs-toggle="collapse" href="#collapse5"
                                        aria-expanded="false" aria-controls="collapseExample">
