@@ -4,14 +4,13 @@ import {getAllSliders} from "./services/apiServices/getRows";
 import {AppContext} from "./Context/AppContext";
 
 function App() {
-    const [loading, setLoading] = useState(false)
-    const [sliders, setSliders] = useState({})
-    const [topProducts, setTopProducts] = useState({})
+    const [loading, setLoading] = useState(false);
     const [isOverflowHidden, setIsOverflowHidden] = useState(false);
+    const [sliders, setSliders] = useState({});
+    const [topProducts, setTopProducts] = useState({});
 
-    const stopBodyScrolling = () => {
+    function stopBodyScrolling() {
         setIsOverflowHidden((prev) => !prev);
-
     }
 
     useEffect(() => {
@@ -30,15 +29,16 @@ function App() {
         };
     })
 
-
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true)
+                stopBodyScrolling({isOverflowHidden, setIsOverflowHidden})
                 const {data: slidersData, status: slidersStatus} = await getAllSliders()
                 const {rows: slidersRows} = slidersData.data;
                 if (slidersStatus === 200) {
                     setLoading(false)
+                    stopBodyScrolling({isOverflowHidden, setIsOverflowHidden})
                     setSliders(slidersRows.filter(item => item.sliders).map(item => item.sliders)[0])
                 }
             } catch (err) {
@@ -63,8 +63,8 @@ function App() {
                 stopBodyScrolling,
             }}>
             <div className="App">
-                <MobileToolbar/>
                 <Navbar/>
+                <MobileToolbar/>
                 <Header/>
                 <Main/>
                 <Footer/>
