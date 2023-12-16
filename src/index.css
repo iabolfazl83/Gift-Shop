@@ -64,8 +64,12 @@ i {
     box-shadow: 0 0 9px rgba(0, 0, 0, .12);
 }
 
-.right-100 {
+.right--200 {
     right: -200%;
+}
+
+.bottom--100 {
+    bottom: -100%;
 }
 
 .top-65 {
@@ -94,4 +98,28 @@ i {
 
 .fs-15 {
     font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-19 {
+    font-size: 19px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.lh-md {
+    line-height: 1.5!important;
 }
