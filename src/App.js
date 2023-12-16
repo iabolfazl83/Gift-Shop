@@ -1,13 +1,34 @@
 import React, {useEffect, useState} from 'react';
-import {Main, Header, Footer, MobileToolbar, Navbar} from "./components";
-import {getAllSliders} from "./services/apiServices/getRows";
+import {Route, Routes} from "react-router-dom";
+import {ContactUs, GiftShopMag, Homepage, Store} from "./components";
+import {getAllCategories, getAllSliders} from "./services/apiServices/getRows";
 import {AppContext} from "./Context/AppContext";
+import ArticlePage from "./components/ArticlePage";
 
 function App() {
     const [loading, setLoading] = useState(false);
+    const [categories, setCategories] = useState({})
     const [isOverflowHidden, setIsOverflowHidden] = useState(false);
     const [sliders, setSliders] = useState({});
     const [topProducts, setTopProducts] = useState({});
+
+    useEffect(() => {
+        const fetchCatsData = async () => {
+            try {
+                setLoading(true)
+                const {data: categoriesData, status: categoriesStatus} = await getAllCategories();
+                const {rows: categoriesRows} = categoriesData.data;
+                if (categoriesStatus === 200) {
+                    setLoading(false)
+                    setCategories(categoriesRows.filter(item => item.tags).map(item => item.tags)[0])
+                }
+            } catch (err) {
+                setLoading(false)
+                console.log(err.message)
+            }
+        }
+        fetchCatsData();
+    }, [])
 
     function stopBodyScrolling() {
         setIsOverflowHidden((prev) => !prev);
@@ -33,12 +54,12 @@ function App() {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                stopBodyScrolling({isOverflowHidden, setIsOverflowHidden})
+                stopBodyScrolling()
                 const {data: slidersData, status: slidersStatus} = await getAllSliders()
                 const {rows: slidersRows} = slidersData.data;
                 if (slidersStatus === 200) {
                     setLoading(false)
-                    stopBodyScrolling({isOverflowHidden, setIsOverflowHidden})
+                    stopBodyScrolling()
                     setSliders(slidersRows.filter(item => item.sliders).map(item => item.sliders)[0])
                 }
             } catch (err) {
@@ -55,6 +76,8 @@ function App() {
             value={{
                 loading,
                 setLoading,
+                categories,
+                setCategories,
                 isOverflowHidden,
                 setIsOverflowHidden,
                 sliders,
@@ -63,11 +86,13 @@ function App() {
                 stopBodyScrolling,
             }}>
             <div className="App">
-                <Navbar/>
-                <MobileToolbar/>
-                <Header/>
-                <Main/>
-                <Footer/>
+                <Routes>
+                    <Route path="/" element={<Homepage/>}/>
+                    <Route path="/contact-us" element={<ContactUs/>}/>
+                    <Route path="/store" element={<Store/>}/>
+                    <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
+                    <Route path="/article-page" element={<ArticlePage/>}/>
+                </Routes>
             </div>
         </AppContext.Provider>
     );
