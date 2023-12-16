@@ -7,24 +7,26 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "./media-queries.css"
-import {ContactUs} from "./components/index";
-import GiftShopMag from "./components/GiftShopMag";
-import Store from "./components/Store";
+import {ContactUs, GiftShopMag, Store} from "./components";
+import ArticlePage from "./components/ArticlePage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App/>}/>
-                <Route path="/contact-us" element={<ContactUs/>}/>
-                <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
-                <Route path="/store" element={<Store/>}/>
+                <Route path="/" element={<App/>}>
+                    <Route path="/contact-us" element={<ContactUs/>}/>
+                    <Route path="/store" element={<Store/>}/>
+                    <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
+                    <Route path="/article-page" element={<ArticlePage/>}/>
+                </Route>
                 <Route path="*" element={
                     <main className="container m-auto">
                         <div className="container w-auto d-flex flex-column gap-5 align-items-center">
                             <div className="w-25">
-                                <img className="w-100" src={require("./assets/images/download.png")} alt="404 error"/>
+                                <img className="w-100" src={require("./assets/images/download.png")}
+                                     alt="404 error"/>
                             </div>
                             <div className="fs-5 text-404">این راه به جایی نمی‌رسه!</div>
                             <div>
