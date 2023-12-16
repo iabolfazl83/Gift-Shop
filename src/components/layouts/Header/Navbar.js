@@ -1,4 +1,4 @@
-import React, {useState, useRef, useContext, useEffect} from "react";
+import React, {useState, useRef, useContext} from "react";
 import {LoadingScreen, MobileSearchScreen} from "../../index"
 import {numberToPersian} from "../../../services/numberToPersian";
 import '../../../../node_modules/swiper/swiper.min.css';
@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import {AppContext} from "../../../Context/AppContext";
 import {Link, useLocation} from "react-router-dom";
-import {getAllCategories} from "../../../services/apiServices/getRows";
 
 export function getCategories(allCategories) {
     if (!allCategories) {
@@ -19,11 +18,13 @@ export function getCategories(allCategories) {
             res.push(<>
                 <div className="mobile-menu-categories-item" id={item.id}>
                     <div className="d-flex justify-content-between">
-                        <a href="" className="w-100">{item.name}</a><span onClick={(e) => {
-                        e.currentTarget.parentNode.nextSibling.classList.toggle("d-none")
-                        e.currentTarget.classList.toggle("angel-down")
-                    }} className="d-inline-block col-1 text-center" role="button">
-                                <i className="fa-solid fa-angle-left shop-dropdown-menu"></i></span>
+                        <Link to={"/store"} className="w-100">{item.name}</Link>
+                        <span onClick={(e) => {
+                            e.currentTarget.parentNode.nextSibling.classList.toggle("d-none")
+                            e.currentTarget.classList.toggle("angel-down")
+                        }} className="d-inline-block col-1 text-center" role="button">
+                                <i className="fa-solid fa-angle-left shop-dropdown-menu"></i>
+                        </span>
                     </div>
                     <div className="d-none fs-12 d-flex flex-column pt-2 px-2">
                         {getCategories(item.childs)}
@@ -31,15 +32,14 @@ export function getCategories(allCategories) {
                 </div>
             </>)
         } else {
-            res.push(<a href="" className="my-1">{item.name}</a>)
+            res.push(<Link to={"/store"} className="my-1">{item.name}</Link>)
         }
     })
     return res
 }
 
 function Navbar() {
-    const {loading, setLoading, stopBodyScrolling, isOverflowHidden, setIsOverflowHidden} = useContext(AppContext)
-    const [categories, setCategories] = useState({})
+    const {loading, setLoading, stopBodyScrolling, isOverflowHidden, setIsOverflowHidden, categories, setCategories} = useContext(AppContext)
     const [screenSearch, setScreenSearch] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [currentCategory, setCurrentCategory] = useState({})
@@ -51,25 +51,6 @@ function Navbar() {
     const categoriesBarsIcon = useRef(null)
     const mobileNavDropDownMenu = useRef(null)
     const shopDropDownMenu = useRef(null)
-
-
-    useEffect(() => {
-        const fetchCatsData = async () => {
-            try {
-                setLoading(true)
-                const {data: categoriesData, status: categoriesStatus} = await getAllCategories();
-                const {rows: categoriesRows} = categoriesData.data;
-                if (categoriesStatus === 200) {
-                    setLoading(false)
-                    setCategories(categoriesRows.filter(item => item.tags).map(item => item.tags)[0])
-                }
-            } catch (err) {
-                setLoading(false)
-                console.log(err.message)
-            }
-        }
-        fetchCatsData();
-    }, [])
 
     function toggleClass(elRef, toggleClass) {
         elRef.current.classList.toggle(`${toggleClass}`)
@@ -91,7 +72,7 @@ function Navbar() {
                             stopBodyScrolling()
                         }} className={`blur-bg ${menuIsOpen === true ? `` : `d-none`}`}></div>
                         <div
-                            className={`mobile-menu box-shadow p-4 position-fixed ${menuIsOpen === true ? `end-0` : `right-100`} top-0 bottom-0
+                            className={`mobile-menu box-shadow p-4 position-fixed ${menuIsOpen === true ? `end-0` : `right--200`} top-0 bottom-0
                         overflow-y-auto overflow-x-hidden hide-scrollbar`}>
                             <div
                                 className="mobile-menu-header border-bottom d-flex justify-content-between gap-4 align-items-center pb-2">
