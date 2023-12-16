@@ -6,11 +6,10 @@
     .gift-shop-mag-articles .swiper-slide {
         width: 60%;
     }
-}
 
-@media screen and (min-width: 576px) {
-    .mag-article-wrapper {
-        width: 44%;
+    .gift-mag-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -56,8 +55,9 @@
         height: 35px;
     }
 
-    .mag-article-wrapper {
-        width: 29.8%;
+    .gift-mag-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .products-container {
@@ -130,8 +130,9 @@
         padding: 10px 16px;
     }
 
-    .mag-article-wrapper {
-        width: 23%;
+    .gift-mag-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
 
     .filter-wrapper {
@@ -189,6 +190,11 @@
 @media screen and (min-width: 1399px) {
     .products-container {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    .gift-mag-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
     }
 
     .product-item-wrapper:nth-of-type(4n+1),
