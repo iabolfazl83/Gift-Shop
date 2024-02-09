@@ -19,10 +19,6 @@
 }
 
 .mobile-toolbar-menu-item {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: auto;
-    text-align: center;
     padding: 10px 0 5px 0;
 }
 
@@ -32,12 +28,15 @@
 
 .mobile-toolbar-menu-item a {
     font-size: 11px;
-    white-space: nowrap;
     font-weight: 600;
     color: #333333;
-    text-align: center;
-    text-align: -webkit-center;
-    text-align: -moz-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    gap: .3rem;
 }
 
 .mobile-toolbar-menu-icons {
@@ -649,9 +648,28 @@
     color: rgba(77, 77, 77, 0.88);
 }
 
-.x-icon {
-    transition: all .25s;
-    transform: rotate(45deg);
+.accordion span {
+    color: #333333;
+    font-size: 13px;
+    text-align: start;
+}
+
+.accordion-button {
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+.accordion-button::after {
+    margin-left: 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: unset !important;
+}
+
+.accordion-button:focus, .accordion-button:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 #userMessage {
@@ -675,7 +693,7 @@
 }
 
 .gift-mag-wrapper {
-    gap: 1rem ;
+    gap: 1rem;
 }
 
 .products-container, .gift-mag-wrapper {
@@ -844,7 +862,7 @@
     transition: all 0.5s cubic-bezier(.19, 1, .22, 1);
 }
 
-.sorting-menu {
+.sorting-menu, .user-options-menu {
     z-index: 9999;
     transition: all 0.5s cubic-bezier(.19, 1, .22, 1);
 }
@@ -866,4 +884,114 @@
     line-height: 1.5;
     font-size: 16px;
     font-weight: 800;
+}
+
+.mobile-header-search {
+    background-color: #f0f0f1;
+    margin: 1rem 0;
+    border-radius: 8px;
+    color: #81858B;
+    font-size: 11px;
+}
+
+.checkout {
+    bottom: 52.2px;
+    z-index: 9;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .14), 0 0 2px rgba(0, 0, 0, .05);;
+}
+
+.checkout button {
+    background-color: #9f2c90;
+    font-size: 12px;
+}
+
+.checkout button:hover {
+    transition: all .25s;
+    opacity: .8;
+    background-color: #9f2c90 !important;
+    border-color: transparent;
+}
+
+.filter-categories {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.empty-cart:hover {
+    opacity: .8;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.cart-item:last-of-type {
+    border: none !important;
+}
+
+.checkout-btn {
+    background-color: #9f2c90 !important;
+    font-size: 16px !important;
+    transition: all .25s;
+}
+
+.checkout-btn:hover {
+    opacity: .8;
+}
+
+.user-profile-photo img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.user-profile-photo div:first-child  {
+    position: relative;
+    width: fit-content;
+}
+
+.change-image-icon {
+    position: absolute;
+    top: -.5rem;
+    right: -.5rem;
+    padding: .5rem;
+    background-color: #9f2c90;
+    border-radius: 50%;
+}
+
+.change-image-icon svg, .user-options-menu svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.options-menu-btn button {
+    background-color: #9f2c90;
+    color: #fff;
+    border: unset;
+    outline: none;
+}
+
+.options-menu-btn button:hover, html body .options .options-menu-btn button:active {
+    opacity: .8;
+    background-color: #9f2c90;
+    color: #fff;
+}
+
+.user-options-menu-item a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.active-option a div, .active-option a span svg {
+    color: #9f2c90;
+    fill: #9f2c90;
+}
+
+.active-option {
+    background-color: #9f2c9014;
+}
+
+#exit {
+    fill: red;
 }
