@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {Link} from "react-router-dom"
 import {Footer, MobileToolbar, Navbar} from "./index";
 import {getCategories} from "./layouts/Header/Navbar";
-import {numberToPersian, insertrialcamma} from "../services/numberToPersian";
+import {numberToPersian, insertRialComma} from "../services/numberToPersian";
 import MultiRangeSlider from "multi-range-slider-react";
 import {AppContext} from "../Context/AppContext";
 
@@ -35,7 +35,7 @@ function Store() {
                         <Link to="/" className="text-muted">خانه</Link> /
                         <span> فروشگاه</span>
                     </div>
-                    <div className="fs-11 text-muted fw-bold">{insertrialcamma(numberToPersian(12))} کالا</div>
+                    <div className="fs-11 text-muted fw-bold">{insertRialComma(numberToPersian(12))} کالا</div>
                 </div>
             </div>
             <div>
@@ -84,7 +84,7 @@ function Store() {
                                         <div className="d-flex gap-1 align-items-center">
                                             <span className="fs-13 fw-bold">از</span>
                                             <span className="fs-14 fw-bolder">
-                                            {insertrialcamma(numberToPersian(minValue))}
+                                            {insertRialComma(numberToPersian(minValue))}
                                             </span>
                                             <span class="fw-bolder"><svg id="toman" xmlns="http://www.w3.org/2000/svg"
                                                                          viewBox="0 0 14 14"><path fill-rule="evenodd"
@@ -94,7 +94,7 @@ function Store() {
                                         <div className="d-flex gap-1 align-items-center">
                                             <span className="fs-13 fw-bold">تا</span>
                                             <span className="fs-14 fw-bolder">
-                                            {insertrialcamma(numberToPersian(maxValue))}
+                                            {insertRialComma(numberToPersian(maxValue))}
                                             </span>
                                             <span class="fw-bolder"><svg id="toman" xmlns="http://www.w3.org/2000/svg"
                                                                          viewBox="0 0 14 14"><path fill-rule="evenodd"
@@ -227,7 +227,7 @@ function Store() {
                                             <div className="d-flex gap-1 align-items-center">
                                                 <span className="fs-13 fw-bold">از</span>
                                                 <span className="fs-14 fw-bolder">
-                                            {insertrialcamma(numberToPersian(minValue))}
+                                            {insertRialComma(numberToPersian(minValue))}
                                             </span>
                                                 <span className="fw-bolder"><svg id="toman"
                                                                                  xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +239,7 @@ function Store() {
                                             <div className="d-flex gap-1 align-items-center">
                                                 <span className="fs-13 fw-bold">تا</span>
                                                 <span className="fs-14 fw-bolder">
-                                            {insertrialcamma(numberToPersian(maxValue))}
+                                            {insertRialComma(numberToPersian(maxValue))}
                                             </span>
                                                 <span className="fw-bolder"><svg id="toman"
                                                                                  xmlns="http://www.w3.org/2000/svg"
@@ -357,7 +357,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>پیک طلایی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -379,7 +379,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>پیک نفره ای</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -401,7 +401,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گل فلزی بزرگ</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -423,7 +423,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -445,7 +445,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -467,7 +467,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -489,7 +489,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -511,7 +511,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -533,7 +533,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -555,7 +555,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
@@ -577,7 +577,7 @@ function Store() {
                                     <div className="product-caption">
                                         <div className="product-name"><h3>گلدان مربع طوسی</h3></div>
                                         <div className="product-price">
-                                            <div> {insertrialcamma(numberToPersian(119000))} <span><svg id="toman"
+                                            <div> {insertRialComma(numberToPersian(119000))} <span><svg id="toman"
                                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                                         viewBox="0 0 14 14"><path
                                                 fill-rule="evenodd"
