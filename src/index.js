@@ -7,8 +7,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "./media-queries.css"
-import {ContactUs, GiftShopMag, Store} from "./components";
+import {ContactUs, GiftShopMag, Profile, Store} from "./components";
 import ArticlePage from "./components/ArticlePage";
+import Cart from "./components/Cart";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,8 @@ root.render(
                     <Route path="/store" element={<Store/>}/>
                     <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
                     <Route path="/article-page" element={<ArticlePage/>}/>
+                    <Route path="/cart" element={<Cart/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
                 </Route>
                 <Route path="*" element={
                     <main className="container m-auto">
