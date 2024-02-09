@@ -83,96 +83,95 @@ function ContactUs() {
                                 <h4 className="fw-bold fs-5">سوالات متداول</h4>
                             </div>
                             <div className="questions">
-                                <div onClick={e => {
-                                    e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
-                                }}
-                                     className="fs-14 border-bottom p-2">
-                                    <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse1"
-                                       aria-expanded="false" aria-controls="collapseExample">
-                                        <span>چگونه می‌توان با پشتیبانی فروشگاه تماس برقرار کرد؟</span>
-                                        <i className="fa-solid fa-plus d-flex align-items-center"></i>
-                                    </a>
-                                    <div className="collapse" id="collapse1">
-                                        <div className="border-top p-2 pb-0 my-2">
-                                            <p>برای تماس با پشتیبانی فروشگاه، می‌توانید از طریق صفحه تماس با ما یا شماره
-                                                تلفن درج شده در سایت، با تیم پشتیبانی تماس بگیرید.</p>
+                                <div className="accordion" id="accordionExample">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingOne">
+                                            <button className="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                <span>چگونه می‌توان با پشتیبانی فروشگاه تماس برقرار کرد؟</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" className="accordion-collapse collapse show"
+                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>برای تماس با پشتیبانی فروشگاه، می‌توانید از طریق صفحه تماس با ما یا
+                                                    شماره
+                                                    تلفن درج شده در سایت، با تیم پشتیبانی تماس بگیرید.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div onClick={e => {
-                                    e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
-                                }}
-                                     className="fs-14 border-bottom p-2">
-                                    <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse2"
-                                       aria-expanded="false" aria-controls="collapseExample">
-                                        <span>
-                                        راه های ارتباطی ما
-                                        </span>
-                                        <i className="fa-solid fa-plus d-flex align-items-center"></i>
-                                    </a>
-                                    <div className="collapse" id="collapse2">
-                                        <div className="border-top p-2 pb-0 my-2">
-                                            <p>شماره تلفن : <a href="tel:09120000000">09120000000</a></p>
-                                            <p>ایمیل :<a href="mailto:something@example.com"> example@something.com</a>
-                                            </p>
-                                            <p className="mb-0">آدرس : تهران، خیابان ولیعصر، پلاک 100</p>
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingTwo">
+                                            <button className="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>راه های ارتباطی ما</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" className="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>شماره تلفن : <a href="tel:09120000000">09120000000</a></p>
+                                                <p>ایمیل :<a
+                                                    href="mailto:something@example.com"> example@something.com</a>
+                                                </p>
+                                                <p className="mb-0">آدرس : تهران، خیابان ولیعصر، پلاک 100</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div onClick={e => {
-                                    e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
-                                }}
-                                     className="fs-14 border-bottom p-2">
-                                    <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse3"
-                                       aria-expanded="false" aria-controls="collapseExample">
-                                        <span>چگونه می‌توان وضعیت سفارش را پیگیری کرد؟</span>
-                                        <i className="fa-solid fa-plus d-flex align-items-center"></i>
-                                    </a>
-                                    <div className="collapse" id="collapse3">
-                                        <div className="border-top p-2 pb-0 my-2">
-                                            <p>برای پیگیری وضعیت سفارش، می‌توانید وارد حساب کاربری خود شده و از قسمت
-                                                وضعیت سفارش یا تاریخچه سفارش‌ها، وضعیت فعلی سفارش خود را مشاهده
-                                                کنید.</p>
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingThree">
+                                            <button className="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                <span>چگونه می‌توان وضعیت سفارش را پیگیری کرد؟</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" className="accordion-collapse collapse"
+                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>برای پیگیری وضعیت سفارش، می‌توانید وارد حساب کاربری خود شده و از قسمت
+                                                    وضعیت سفارش یا تاریخچه سفارش‌ها، وضعیت فعلی سفارش خود را مشاهده
+                                                    کنید.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div onClick={e => {
-                                    e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
-                                }}
-                                     className="fs-14 border-bottom p-2">
-                                    <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse4"
-                                       aria-expanded="false" aria-controls="collapseExample">
-                                        <span>آیا امکان بازگشت کالا و استرداد وجه وجود دارد؟</span>
-                                        <i className="fa-solid fa-plus d-flex align-items-center"></i>
-                                    </a>
-                                    <div className="collapse" id="collapse4">
-                                        <div className="border-top p-2 pb-0 my-2">
-                                            <p>بله، فروشگاه قوانین بازگشت کالا و استرداد وجه را دارد. شما می‌توانید با
-                                                مطالعه شرایط بازگشت کالا در صفحه مربوطه، اقدام به بازگشت کالا و درخواست
-                                                استرداد وجه کنید.</p>
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingFour">
+                                            <button className="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                <span>آیا امکان بازگشت کالا و استرداد وجه وجود دارد؟</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" className="accordion-collapse collapse"
+                                             aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>بله، فروشگاه قوانین بازگشت کالا و استرداد وجه را دارد. شما می‌توانید
+                                                    با
+                                                    مطالعه شرایط بازگشت کالا در صفحه مربوطه، اقدام به بازگشت کالا و
+                                                    درخواست
+                                                    استرداد وجه کنید.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div onClick={e => {
-                                    e.currentTarget.firstChild.lastChild.classList.toggle("x-icon")
-                                }}
-                                     className="fs-14 border-bottom p-2">
-                                    <a className="d-inline-block d-flex justify-content-between"
-                                       data-bs-toggle="collapse" href="#collapse5"
-                                       aria-expanded="false" aria-controls="collapseExample">
-                                        <span>سیاست حریم خصوصی مشتریان شما چگونه است؟</span>
-                                        <i className="fa-solid fa-plus d-flex align-items-center"></i>
-                                    </a>
-                                    <div className="collapse" id="collapse5">
-                                        <div className="border-top p-2 pb-0 my-2">
-                                            <p>حریم خصوصی مشتریان برای ما بسیار مهم است. ما اطلاعات شخصی مشتریان را
-                                                محافظت می‌کنیم و از آن‌ها صرفاً برای پردازش سفارشات و بهبود خدمات
-                                                استفاده می‌کنیم. ما هیچگونه اطلاعاتی را به شخص یا سازمان دیگری منتقل
-                                                نمی‌کنیم.</p>
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingFive">
+                                            <button className="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                <span>سیاست حریم خصوصی مشتریان شما چگونه است؟</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" className="accordion-collapse collapse"
+                                             aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>حریم خصوصی مشتریان برای ما بسیار مهم است. ما اطلاعات شخصی مشتریان را
+                                                    محافظت می‌کنیم و از آن‌ها صرفاً برای پردازش سفارشات و بهبود خدمات
+                                                    استفاده می‌کنیم. ما هیچگونه اطلاعاتی را به شخص یا سازمان دیگری منتقل
+                                                    نمی‌کنیم.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
