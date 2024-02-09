@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {Route, Routes} from "react-router-dom";
-import {ContactUs, GiftShopMag, Homepage, Store} from "./components";
+import {ContactUs, GiftShopMag, Homepage, Store, Cart, Profile, ArticlePage} from "./components";
 import {getAllCategories, getAllSliders} from "./services/apiServices/getRows";
 import {AppContext} from "./Context/AppContext";
-import ArticlePage from "./components/ArticlePage";
 
 function App() {
     const [loading, setLoading] = useState(false);
-    const [categories, setCategories] = useState({})
     const [isOverflowHidden, setIsOverflowHidden] = useState(false);
+    const [categories, setCategories] = useState({})
     const [sliders, setSliders] = useState({});
     const [topProducts, setTopProducts] = useState({});
 
@@ -54,12 +53,10 @@ function App() {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                stopBodyScrolling()
                 const {data: slidersData, status: slidersStatus} = await getAllSliders()
                 const {rows: slidersRows} = slidersData.data;
                 if (slidersStatus === 200) {
                     setLoading(false)
-                    stopBodyScrolling()
                     setSliders(slidersRows.filter(item => item.sliders).map(item => item.sliders)[0])
                 }
             } catch (err) {
@@ -92,6 +89,8 @@ function App() {
                     <Route path="/store" element={<Store/>}/>
                     <Route path="/giftshop-mag" element={<GiftShopMag/>}/>
                     <Route path="/article-page" element={<ArticlePage/>}/>
+                    <Route path="/cart" element={<Cart/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
                 </Routes>
             </div>
         </AppContext.Provider>
