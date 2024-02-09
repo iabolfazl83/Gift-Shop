@@ -1,6 +1,6 @@
-import React, {useState, useRef, useContext} from "react";
-import {LoadingScreen, MobileSearchScreen} from "../../index"
-import {numberToPersian} from "../../../services/numberToPersian";
+import React, {useState, useRef, useContext, useEffect} from "react";
+import {LoadingScreen, MobileSearchScreen} from "../../index";
+import {numberToPersian, insertRialComma} from "../../../services/numberToPersian";
 import '../../../../node_modules/swiper/swiper.min.css';
 import '../../../../node_modules/swiper/swiper-bundle.min.css';
 import 'swiper/css/pagination';
@@ -39,7 +39,13 @@ export function getCategories(allCategories) {
 }
 
 function Navbar() {
-    const {loading, setLoading, stopBodyScrolling, isOverflowHidden, setIsOverflowHidden, categories, setCategories} = useContext(AppContext)
+    const {
+        loading,
+        stopBodyScrolling,
+        categories,
+        isOverflowHidden,
+        setIsOverflowHidden,
+    } = useContext(AppContext)
     const [screenSearch, setScreenSearch] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [currentCategory, setCurrentCategory] = useState({})
@@ -55,6 +61,13 @@ function Navbar() {
     function toggleClass(elRef, toggleClass) {
         elRef.current.classList.toggle(`${toggleClass}`)
     }
+
+    useEffect(() => {
+        if (window.innerWidth < 1024) {
+            menuIsOpen === false ? setIsOverflowHidden(false) : setIsOverflowHidden(true)
+        }
+
+    }, []);
 
     return (
         <>
@@ -160,28 +173,38 @@ function Navbar() {
                             </div>
                         </div>
                         <section
-                            className="main-mobile-header d-flex justify-content-between align-items-center">
+                            className="main-mobile-header d-flex align-items-center">
                             <div className="search-and-menu">
-                    <span role="button" className="mx-2" onClick={() => {
-                        setMenuIsOpen(true)
-                        stopBodyScrolling()
-                    }}><i className="fa-solid fa-bars"></i></span>
                                 <span role="button" className="mx-2" onClick={() => {
-                                    setScreenSearch(true)
-                                }}><i className="fa-solid fa-magnifying-glass"></i></span>
+                                    setMenuIsOpen(true)
+                                    stopBodyScrolling()
+                                }}><i className="fa-solid fa-bars"></i></span>
+                                {/*<span role="button" className="mx-2" onClick={() => {setScreenSearch(true)}}>*/}
+                                {/*    <i className="fa-solid fa-magnifying-glass"></i></span>*/}
                             </div>
-                            <div className="header-logo-mobile">
-                                <Link to="/">
-                                    <img
-                                        src={require("../../../assets/images/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg.png")}
-                                        alt="Gift Shop Logo"/>
-                                </Link>
-                            </div>
-                            <div className="user-tools-mobile">
-                                <a href="" className="mx-3 position-relative d-inline-block"><span
-                                    className="badge-icon">{numberToPersian(8)}</span><i
-                                    className="fa-solid fa-cart-shopping"></i></a>
-                                <a href="" className="mx-2"><i className="fa-solid fa-user"></i></a>
+                            {/*<div className="header-logo-mobile">*/}
+                            {/*    <Link to="/">*/}
+                            {/*        <img*/}
+                            {/*            src={require("../../../assets/images/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg.png")}*/}
+                            {/*            alt="Gift Shop Logo"/>*/}
+                            {/*    </Link>*/}
+                            {/*</div>*/}
+                            {/*<div className="user-tools-mobile">*/}
+                            {/*    <a href="" className="mx-3 position-relative d-inline-block"><span*/}
+                            {/*        className="badge-icon">{numberToPersian(8)}</span><i*/}
+                            {/*        className="fa-solid fa-cart-shopping"></i></a>*/}
+                            {/*    <a href="" className="mx-2"><i className="fa-solid fa-user"></i></a>*/}
+                            {/*</div>*/}
+
+                            <div className="mobile-header-search col" onClick={() => {
+                                setScreenSearch(true)
+                            }}>
+                                <div className="d-flex align-items-center px-3 gap-2">
+                                    <div className=" py-3">جستجو در</div>
+                                    <div className="w-25"><img className="w-100"
+                                                               src={require("../../../assets/images/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg-small-logo.png")}
+                                                               alt="Logo"/></div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -204,14 +227,14 @@ function Navbar() {
                                        placeholder="جستجوی محصولات... "/>
                             </div>
                             <div className="user-tools-desktop d-flex justify-content-between gap-4">
-                                <a href="" title="سبد خرید" className="cart position-relative"><span
-                                    className="badge-icon">{numberToPersian(8)}</span><i
-                                    className="fa-solid fa-cart-shopping"></i></a>
+                                <Link to={"/cart"} title="سبد خرید" className="cart position-relative"><span
+                                    className="badge-icon">{insertRialComma(numberToPersian(8))}</span><i
+                                    className="fa-solid fa-cart-shopping"></i></Link>
                                 <a href="" title="علاقه مندی ها" className="favorites position-relative"><span
-                                    className="badge-icon">{numberToPersian(0)}</span><i
+                                    className="badge-icon">{insertRialComma(numberToPersian(0))}</span><i
                                     className="fa-solid fa-heart"></i></a>
-                                <a href="" title="پروفایل" className="user-profile"><i
-                                    className="fa-solid fa-user"></i></a>
+                                <Link to={"/profile"} title="پروفایل" className="user-profile"><i
+                                    className="fa-solid fa-user"></i></Link>
                             </div>
                         </section>
                         <section className="header-nav-list d-flex justify-content-start pt-3">
