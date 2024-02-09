@@ -11,6 +11,9 @@ export {default as Footer} from "./layouts/Footer";
 export {default as ContactUs} from "./ContactUs";
 export {default as GiftShopMag} from "./GiftShopMag";
 export {default as Store} from "./Store";
+export {default as Cart} from "./Cart";
+export {default as Profile} from "./Profile";
+export {default as ArticlePage} from "./ArticlePage";
 
 // Other Components
 export {default as LoadingScreen} from "./LoadingScreen";
