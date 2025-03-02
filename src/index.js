@@ -7,9 +7,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "./media-queries.css"
-import {ContactUs, GiftShopMag, Profile, Store} from "./components";
-import ArticlePage from "./components/ArticlePage";
-import Cart from "./components/Cart";
+import {ContactUs, GiftShopMag, Profile, Store, ArticlePage, Cart} from "./components";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

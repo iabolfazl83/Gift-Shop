@@ -945,7 +945,7 @@
     height: 5rem;
 }
 
-.user-profile-photo div:first-child  {
+.user-profile-photo div:first-child {
     position: relative;
     width: fit-content;
 }
@@ -977,6 +977,10 @@
     color: #fff;
 }
 
+.user-options-menu-item:last-of-type {
+    border-bottom: 0;
+}
+
 .user-options-menu-item a {
     display: flex;
     gap: 1rem;
@@ -992,6 +996,118 @@
     background-color: #9f2c9014;
 }
 
-#exit {
+#exit path {
     fill: red;
+}
+
+.account-info-content svg, .orders-info-content svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.current-orders svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dashboard-header span {
+    color: rgb(63 63 70);
+    font-weight: 500;
+}
+
+.green-dot {
+    width: .5rem;
+    height: .5rem;
+    background-color: #b031a0;
+    border-radius: 50%;
+}
+
+.profile-sections-header span {
+    color: #52525b;
+    font-weight: 500;
+}
+
+.account-info-content div.d-grid, .orders-info-content div.d-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.complete-user-info > span:last-of-type, .orders-current > span:last-of-type,
+.returned-orders > span:last-of-type, .reset-password > span:last-of-type,
+.canceled-orders > span:last-of-type, .user-favorites > span:last-of-type,
+.delivered-orders > span:last-of-type, .notifications > span:last-of-type {
+    font-weight: 600;
+}
+
+.complete-user-info, .orders-current {
+    background-color: #0ea5e9;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.complete-user-info:hover, .orders-current:hover {
+    opacity: .8;
+}
+
+.complete-user-info > span:first-of-type, .orders-current > span:first-of-type {
+    background-color: #0894d8;
+}
+
+.returned-orders, .reset-password {
+    background-color: #eab308;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.returned-orders:hover, .reset-password:hover {
+    opacity: .8;
+}
+
+.returned-orders > span:first-of-type, .reset-password > span:first-of-type {
+    background-color: #da9e06;
+}
+
+.canceled-orders, .user-favorites {
+    background-color: #f43f5e;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.canceled-orders:hover, .user-favorites:hover {
+    opacity: .8;
+}
+
+.canceled-orders > span:first-of-type, .user-favorites > span:first-of-type {
+    background-color: #eb2e53;
+}
+
+.delivered-orders, .notifications {
+    background-color: #10b981;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.delivered-orders:hover, .notifications:hover {
+    opacity: .8;
+}
+
+.delivered-orders > span:first-of-type, .notifications > span:first-of-type {
+    background-color: #0ba775;
+}
+
+.order-status {
+    border: 1px solid rgb(243 244 246);
+}
+
+.waiting-for-checkout {
+    color: rgb(234 179 8);
+    fill: rgb(234 179 8);
+}
+
+.remaining-time-to-checkout {
+    color: #ef4444;
+}
+
+.checked-out-order {
+    color: #10b981;
+    fill: #10b981;
 }
