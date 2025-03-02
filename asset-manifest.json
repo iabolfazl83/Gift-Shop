@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Gift-Shop/static/css/main.4c921b90.css",
+    "main.js": "/Gift-Shop/static/js/main.1126f3f8.js",
+    "static/media/R.jpg": "/Gift-Shop/static/media/R.db1107a8e221d06586f8.jpg",
+    "static/media/article-1.jpg": "/Gift-Shop/static/media/article-1.f9c98961e3caca0218cb.jpg",
+    "static/media/woman-gift.jpg": "/Gift-Shop/static/media/woman-gift.94e25c1670cdc3deb324.jpg",
+    "static/media/good-airbnb-guest-2.jpg": "/Gift-Shop/static/media/good-airbnb-guest-2.b354e6855ded81472809.jpg",
+    "static/media/product-slide-2.jpg": "/Gift-Shop/static/media/product-slide-2.e5a1879845be9fec5ea6.jpg",
+    "static/media/product-slide-5.jpg": "/Gift-Shop/static/media/product-slide-5.9eff86e77f674e7d4238.jpg",
+    "static/media/gift.jpg": "/Gift-Shop/static/media/gift.a6a52690ed0e2dae52fe.jpg",
+    "static/media/product-slide-3.jpg": "/Gift-Shop/static/media/product-slide-3.e5af8553a905e7285ea2.jpg",
+    "static/media/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg.png": "/Gift-Shop/static/media/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg.11bcff5a191f8c462927.png",
+    "static/media/product-2.jpg": "/Gift-Shop/static/media/product-2.e2015c712d632c1b2513.jpg",
+    "static/media/article-4.jpg": "/Gift-Shop/static/media/article-4.67e96d86b180a9f2b75f.jpg",
+    "static/media/loading-3.gif": "/Gift-Shop/static/media/loading-3.aeff492ac3ea3e610c2e.gif",
+    "static/media/article-3.jpg": "/Gift-Shop/static/media/article-3.b022d490b3fd917e1769.jpg",
+    "static/media/product-slide-4.jpg": "/Gift-Shop/static/media/product-slide-4.9328fda579661a0e1533.jpg",
+    "static/media/product-4.jpg": "/Gift-Shop/static/media/product-4.f7af5c5d93a27a333ad9.jpg",
+    "static/media/product-slide-6.jpg": "/Gift-Shop/static/media/product-slide-6.773cf6c20715b7cb1209.jpg",
+    "static/media/product-slide-1.jpg": "/Gift-Shop/static/media/product-slide-1.85aaa425373acd3ac182.jpg",
+    "static/media/product-3.jpg": "/Gift-Shop/static/media/product-3.d33bdab89fa91ca72e16.jpg",
+    "static/media/product-slide-7.jpg": "/Gift-Shop/static/media/product-slide-7.4d9e43082bb329a8354f.jpg",
+    "static/media/product-1.jpg": "/Gift-Shop/static/media/product-1.093ae0e52d07842899a9.jpg",
+    "static/media/gift-idea.jpg": "/Gift-Shop/static/media/gift-idea.e6252876e834a0fe5e14.jpg",
+    "static/media/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg-small-logo.png": "/Gift-Shop/static/media/gift-shop-logo-design-love-gift-symbol-icon-gift-logo-design-template_657888-116-removebg-small-logo.d51707cc70afd90bd43a.png",
+    "static/media/article-2.jpg": "/Gift-Shop/static/media/article-2.74e57e81ab753f9c5d02.jpg",
+    "static/media/user.png": "/Gift-Shop/static/media/user.a6143582309785dca610.png",
+    "static/media/samandehi.png": "/Gift-Shop/static/media/samandehi.e6ea783361d5b797f160.png",
+    "index.html": "/Gift-Shop/index.html",
+    "main.4c921b90.css.map": "/Gift-Shop/static/css/main.4c921b90.css.map",
+    "main.1126f3f8.js.map": "/Gift-Shop/static/js/main.1126f3f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c921b90.css",
+    "static/js/main.1126f3f8.js"
+  ]
+}
